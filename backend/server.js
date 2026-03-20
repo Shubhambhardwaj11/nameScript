@@ -1,7 +1,8 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const dotenv  = require('dotenv')
-dotenv.config()
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config()
+}
 const cors = require('cors')
 
 const app = express()
