@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NameScript - History</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0a0a0f;
+    color: #f0f0f0;
+    font-family: 'Playfair Display', serif;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.back-btn {
+    display: inline-block;
+    color: rgba(245,200,66,0.8);
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+    transition: color 0.2s;
+}
+
+.back-btn:hover { color: #f5c842; }
+
+header {
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #fff 30%, #f5c842 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+header p {
+    color: rgba(240,240,240,0.5);
+    font-family: 'DM Sans', sans-serif;
+    margin-top: 8px;
+}
+
+.history-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.history-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 20px;
+    padding: 24px;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.history-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(245,200,66,0.3);
+}
+
+.history-card .name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f5c842;
+    margin-bottom: 8px;
+}
+
+.history-card .date {
+    font-size: 0.75rem;
+    color: rgba(240,240,240,0.4);
+    letter-spacing: 1px;
+}
+
+.history-card .preview {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: rgba(240,240,240,0.6);
+}
+
+@media (max-width: 768px) {
+    .history-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .history-list {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Back Button -->
+        <a href="index.html" class="back-btn">← Back to Search</a>
+
+        <header>
+            <h1>Recent Searches</h1>
+            <p>Names you've explored before</p>
+        </header>
+
+        <!-- History List -->
+        <div id="historyList" class="history-list">
+            <!-- Cards will be added here by JavaScript -->
+        </div>
+
+    </div>
+
+    <script src="history.js"></script>
+</body>
+</html>

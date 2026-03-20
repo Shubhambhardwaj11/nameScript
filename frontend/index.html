@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NameScript</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <!-- VIEW 1: Search -->
+    <div id="searchView">
+        <div class="logo-area">
+            <div class="logo-tag">✦ Name Transliterator</div>
+            <h1 class="logo-title">NameScript</h1>
+            <p class="logo-subtitle">Discover your name across the world</p>
+        </div>
+
+        <div class="search-wrapper">
+            <div class="search-inner">
+                <input type="text" id="nameInput" placeholder="Enter your name..." autocomplete="off">
+                <button id="searchBtn">Discover →</button>
+            </div>
+            <p class="search-hint">Try "Shubham", "Ahmed", "Priya"...</p>
+        </div>
+
+        <a href="history.html" class="history-link">
+            ↗ View search history
+        </a>
+
+        <div class="lang-preview">
+            <span class="lang-pill">🇮🇳 Hindi</span>
+            <span class="lang-pill">🇵🇰 Urdu</span>
+            <span class="lang-pill">🇷🇺 Russian</span>
+            <span class="lang-pill">🇸🇦 Arabic</span>
+            <span class="lang-pill">🇬🇷 Greek</span>
+            <span class="lang-pill">🇮🇳 Bengali</span>
+            <span class="lang-pill">+ 10 more</span>
+        </div>
+    </div>
+
+    <!-- VIEW 2: Result -->
+    <div id="resultView">
+        <div class="result-header">
+            <p class="result-name-label">✦ Your name in 16 languages</p>
+            <h2 class="result-name" id="resultName"></h2>
+            <p class="result-count">Transliterated across scripts & alphabets</p>
+        </div>
+
+        <div id="cardsContainer"></div>
+
+        <div class="result-actions">
+            <button class="btn-download" id="downloadBtn">⬇ Download Card</button>
+            <button class="btn-back" id="backBtn">← Search Again</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
