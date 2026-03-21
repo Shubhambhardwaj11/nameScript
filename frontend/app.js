@@ -16,7 +16,7 @@ searchBtn.addEventListener("click",async()=>{
         alert("Please enter a name")
         return
     }
-    const response = await fetch("https://namescript-api.onrender.com/api/translate",{
+    const response = await fetch("https://namescript.onrender.com/api/translate",{
     method : 'POST',
     headers:{
         'Content-Type' : 'application/json'
