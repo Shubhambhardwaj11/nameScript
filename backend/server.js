@@ -9,8 +9,9 @@ console.log('NODE_ENV:', process.env.NODE_ENV)
 const app = express()
 
 app.use(cors({
-    origin: ['https://name-script.vercel.app', 'http://localhost:5500'],
-    methods: ['GET', 'POST', 'DELETE']
+    origin: '*',
+    methods: ['GET', 'POST', 'DELETE'],
+    allowedHeaders: ['Content-Type']
 }))
 app.use(express.json())
 
