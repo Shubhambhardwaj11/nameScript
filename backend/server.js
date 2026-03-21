@@ -8,7 +8,10 @@ console.log('NODE_ENV:', process.env.NODE_ENV)
 
 const app = express()
 
-app.use(cors())
+app.use(cors({
+    origin: ['https://name-script.vercel.app', 'http://localhost:5500'],
+    methods: ['GET', 'POST', 'DELETE']
+}))
 app.use(express.json())
 
 const translateRoute = require('./routes/translate')
