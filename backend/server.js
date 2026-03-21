@@ -9,11 +9,10 @@ console.log('NODE_ENV:', process.env.NODE_ENV)
 const app = express()
 
 app.use(cors({
-    origin: '*',
+    origin: true,
     methods: ['GET', 'POST', 'DELETE'],
     allowedHeaders: ['Content-Type'],
-    preflightContinue: false,
-    optionsSuccessStatus: 204
+    credentials : true
 }))
 
 app.use(express.json())
