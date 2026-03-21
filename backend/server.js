@@ -13,6 +13,8 @@ app.use(cors({
     methods: ['GET', 'POST', 'DELETE'],
     allowedHeaders: ['Content-Type']
 }))
+app.options('*', cors())
+
 app.use(express.json())
 
 const translateRoute = require('./routes/translate')
