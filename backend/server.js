@@ -3,6 +3,8 @@ const mongoose = require('mongoose')
 const dotenv  = require('dotenv')
 dotenv.config()
 const cors = require('cors')
+console.log('MONGO_URI exists:', !!process.env.MONGO_URI)
+console.log('NODE_ENV:', process.env.NODE_ENV)
 
 const app = express()
 
