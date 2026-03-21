@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const response = await fetch('https://namescript-api.onrender.com/api/history')
+    const response = await fetch('https://namescript.onrender.com/api/history')
     const data = await response.json()
     console.log(data)
 
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     historyList.addEventListener('click', async (e) => {
         if (e.target.classList.contains('delete-btn')) {
             const id = e.target.dataset.id
-            await fetch(`https://namescript-api.onrender.com/api/history/${id}`, {
+            await fetch(`https://namescript.onrender.com/api/history/${id}`, {
                 method: 'DELETE'
             })
             e.target.parentElement.remove()
