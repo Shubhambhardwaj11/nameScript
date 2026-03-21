@@ -11,9 +11,10 @@ const app = express()
 app.use(cors({
     origin: '*',
     methods: ['GET', 'POST', 'DELETE'],
-    allowedHeaders: ['Content-Type']
+    allowedHeaders: ['Content-Type'],
+    preflightContinue: false,
+    optionsSuccessStatus: 204
 }))
-app.options('*', cors())
 
 app.use(express.json())
 
