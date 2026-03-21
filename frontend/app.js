@@ -16,6 +16,10 @@ searchBtn.addEventListener("click",async()=>{
         alert("Please enter a name")
         return
     }
+    // Show loading state
+    searchBtn.textContent = "Discovering... ⏳"
+    searchBtn.disabled = true
+
     const response = await fetch("https://namescript.onrender.com/api/translate",{
     method : 'POST',
     headers:{
@@ -25,6 +29,10 @@ searchBtn.addEventListener("click",async()=>{
 })
 
 const data = await response.json()
+
+searchBtn.textContent = "Discover →"
+searchBtn.disabled = false
+
 console.log(data)
 searchView.style.display ='none'
 resultView.style.display = 'block'
